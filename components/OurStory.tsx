@@ -107,7 +107,7 @@ export default function OurStory() {
           <div className="flex -space-x-6">
             <div className="relative h-36 w-28 rotate-[-6deg] overflow-hidden rounded-2xl border-4 border-white shadow-xl dark:border-plum-800 sm:h-44 sm:w-36">
               <Image
-                src="/hero/story-1.svg"
+                src="/hero/story-1.jpeg"
                 alt="Story memory placeholder"
                 fill
                 className="object-cover"
@@ -115,7 +115,7 @@ export default function OurStory() {
             </div>
             <div className="relative h-36 w-28 rotate-[6deg] overflow-hidden rounded-2xl border-4 border-white shadow-xl dark:border-plum-800 sm:h-44 sm:w-36">
               <Image
-                src="/hero/story-2.svg"
+                src="/hero/story-2.jpeg"
                 alt="Story memory placeholder"
                 fill
                 className="object-cover"
