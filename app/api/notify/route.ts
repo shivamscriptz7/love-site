@@ -123,7 +123,7 @@ const NOTIFY_EMAIL = "shivamshakya2277@gmail.com,teamwork2177@gmail.com";
           <tr>
             <td align="center" style="padding-top: 20px;">
               <p style="margin:0; font-size: 12px; color: #d3a6bb;">
-                Sent automatically by ${SITE_CONFIG?.name ?? "your site"}
+                Sent automatically by ${SITE_CONFIG?.authorName ?? "your site"}
               </p>
             </td>
           </tr>
