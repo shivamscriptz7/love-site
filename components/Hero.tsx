@@ -114,7 +114,7 @@ export default function Hero() {
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3rem] shadow-2xl ring-1 ring-white/40 dark:ring-white/10">
             <Image
-              src="/hero/couple-hero.svg"
+              src="/hero/couple-hero.jpeg"
               alt="A romantic portrait placeholder — replace with your own photo"
               fill
               priority
