@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-hosted fonts (no external font CDN) */
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/800.css";
+@import "@fontsource/playfair-display/900.css";
+@import "@fontsource/dancing-script/400.css";
+@import "@fontsource/dancing-script/500.css";
+@import "@fontsource/dancing-script/600.css";
+@import "@fontsource/dancing-script/700.css";
+@import "@fontsource/great-vibes/400.css";
+@import "@fontsource/poppins/300.css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+
+:root {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-script: "Great Vibes", "Dancing Script", cursive;
+  --font-body: "Poppins", "Segoe UI", sans-serif;
+
+  --bg: 255 245 247;
+  --bg-elevated: 255 255 255;
+  --ink: 61 10 36;
+  --ink-soft: 122 60 88;
+  --hairline: 255 208 221;
+}
+
+.dark {
+  --bg: 18 7 32;
+  --bg-elevated: 26 14 42;
+  --ink: 250 235 245;
+  --ink-soft: 214 180 210;
+  --hairline: 74 44 96;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-family: var(--font-body);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(248, 68, 122, 0.25);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f8447a, #c11553);
+  border-radius: 10px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-script {
+  font-family: var(--font-script);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #f8447a 0%, #e8a940 50%, #c11553 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.dark .glass {
+  background: rgba(42, 22, 66, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 182, 202, 0.5);
+}
+
+.dark .glass-card {
+  background: rgba(42, 22, 66, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, currentColor 40%, #fff 50%, currentColor 60%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3s linear infinite;
+}
